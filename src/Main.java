@@ -3,12 +3,17 @@ public class Main {
     public static void main(String[] args) {
         int currentBalance = 100;
         int refill = 1100;
-        int newBalance;
+        int bonus;
+
         if(refill > 1000) {
-            newBalance = refill / 100 + refill + currentBalance;
+            bonus = refill / 100;
         } else {
-            newBalance = refill + currentBalance;
+            bonus = 0;
         }
-        System.out.println("Balance: " + newBalance);
+        int newBalance = currentBalance + refill + bonus;
+
+        System.out.println("Бонус :" + bonus);
+        System.out.println("Итоговый счет: " + newBalance);
     }
+
     }
